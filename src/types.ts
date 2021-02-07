@@ -1,6 +1,8 @@
 export interface GameConfig {}
 
-export interface GameState {}
+export interface GameState {
+	score: number;
+}
 
 export interface GameVars {
 	gameState: GameState;

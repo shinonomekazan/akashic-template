@@ -7,7 +7,6 @@ export default class extends g.Scene {
 
 	get config() {
 		const vars = this.game.vars as types.GameVars;
-		this.state;
 		return vars.config;
 	}
 
