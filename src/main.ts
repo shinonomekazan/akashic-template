@@ -5,12 +5,11 @@ function main(param: g.GameMainParameterObject): void {
 	const initialScene = new scenes.GameScene({
 		game: g.game,
 	});
-	const vars = (g.game.vars as types.GameVars);
+	const vars = g.game.vars as types.GameVars;
 	vars.gameState = {
 		score: 0,
 	};
-	vars.config = {
-	};
+	vars.config = {};
 	g.game.pushScene(initialScene);
 }
 
