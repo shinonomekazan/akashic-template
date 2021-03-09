@@ -1,6 +1,6 @@
 {
 	"name": "akashic-template",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "",
 	"scripts": {
 		"clean": "rimraf ./script",
@@ -18,7 +18,7 @@
 		"export:zip": "rimraf game.zip && akashic-cli-export-zip -o game.zip -s",
 		"export:html": "rimraf game && akashic-cli-export-html -o game",
 		"export:content": "rimraf game.zip && akashic-cli-export-html -o ./game.zip --atsumaru",
-		"test": "jest"
+		"test": "npm run lint && jest"
 	},
 	"author": "Shinonomekazan Co., Ltd.",
 	"license": "MIT",
