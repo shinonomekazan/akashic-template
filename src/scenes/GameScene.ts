@@ -16,7 +16,7 @@ export default class extends BaseScene {
 
 		this.onLoad.addOnce(this.onLoadHandler, this);
 		this.onMessage.add(handlers.LogginHandler);
-		this.onMessage.add(this.onMessageHandler, this);
+		this.onMessage.add(this.handleMessage, this);
 		this.button = undefined;
 		this.rect = undefined;
 	}
@@ -34,12 +34,12 @@ export default class extends BaseScene {
 			y: this.game.height - 34 - 17,
 			parent: this,
 		});
-		this.button.clicked.add(this.onButtonClick, this);
+		this.button.onClick.add(this.handleButtonClick, this);
 
 		this.append(this.rect);
 	}
 
-	onButtonClick() {
+	handleButtonClick() {
 		if (this.rect.visible()) {
 			this.rect.hide();
 		} else {
@@ -49,7 +49,7 @@ export default class extends BaseScene {
 		console.log("clicked");
 	}
 
-	onMessageHandler(arg: types.MessageEvent) {
+	handleMessage(arg: types.MessageEvent) {
 		switch (arg.data.type) {
 			default:
 			// 無視
