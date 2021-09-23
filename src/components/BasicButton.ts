@@ -16,7 +16,7 @@ export interface ClickEvent {
 export default class {
 	readonly view: entities.FrameButton;
 
-	readonly clicked: g.Trigger<ClickEvent>;
+	readonly onClick: g.Trigger<ClickEvent>;
 
 	readonly behavior: behaviors.ClickableFrame;
 
@@ -25,7 +25,7 @@ export default class {
 	constructor(p: BasicButtonParameters) {
 		this.view = new entities.FrameButton(p.scene, p);
 		this.view.touchable = true;
-		this.clicked = new g.Trigger();
+		this.onClick = new g.Trigger();
 		this.behavior = new behaviors.ClickableFrame(this.view, 0, 1);
 		if (p.quick == null) {
 			this.view.onPointUp.add(this.onClicked, this);
@@ -41,7 +41,7 @@ export default class {
 		if (this._disabled) {
 			return;
 		}
-		this.clicked.fire({
+		this.onClick.fire({
 			local: e.local,
 			player: e.player,
 		});
