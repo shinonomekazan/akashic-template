@@ -14,9 +14,37 @@
 			"width": 102,
 			"height": 34,
 			"path": "assets/parts/buttons.png"
+		},
+		"assets/maps/basic.png": {
+			"type": "image",
+			"path": "assets/maps/basic.png",
+			"width": 512,
+			"height": 512
+		},
+		"assets/characters/pipo-charachip001.png": {
+			"type": "image",
+			"path": "assets/characters/pipo-charachip001.png",
+			"width": 96,
+			"height": 128
+		},
+		"assets/maps/wolf_sea.png": {
+			"type": "image",
+			"path": "assets/maps/wolf_sea.png",
+			"width": 32,
+			"height": 80
+		},
+		"assets/maps/wolf_sand.png": {
+			"type": "image",
+			"path": "assets/maps/wolf_sand.png",
+			"width": 16,
+			"height": 80
 		}
 	},
-	"moduleMainScripts": {},
+	"moduleMainScripts": {
+		"@akashic-extension/akashic-tile": "node_modules/@akashic-extension/akashic-tile/lib/index.js",
+		"akashic-wolf-autotile": "node_modules/akashic-wolf-autotile/build/index.js",
+		"akashic-simple-character4": "node_modules/akashic-simple-character4/build/index.js"
+	},
 	"environment": {
 		"sandbox-runtime": "3",
 		"akashic-runtime": {
@@ -24,5 +52,10 @@
 			"flavor": "-canvas"
 		}
 	},
-	"globalScripts": []
+	"globalScripts": [
+		"node_modules/@akashic-extension/akashic-tile/lib/Tile.js",
+		"node_modules/@akashic-extension/akashic-tile/lib/index.js",
+		"node_modules/akashic-wolf-autotile/build/index.js",
+		"node_modules/akashic-simple-character4/build/index.js"
+	]
 }
