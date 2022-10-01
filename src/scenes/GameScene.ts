@@ -4,24 +4,23 @@ import * as handlers from "../handlers";
 import * as behaviors from "../behaviors";
 import * as components from "../components";
 import * as utils from "../utils";
-import BaseScene from "./BaseScene";
+import * as constraints from "../constraints";
+import { BaseScene } from "./BaseScene";
 
-export default class extends BaseScene {
+export class GameScene extends BaseScene {
 	button?: components.BasicButton;
 
 	rect?: entities.RedRect;
 
 	constructor(param: g.SceneParameterObject) {
-		super(utils.mergeAssetPaths(param, ["/assets/parts/buttons.png"]));
+		super(utils.mergeAssetPaths(param, constraints.AssetPaths));
 
-		this.onLoad.addOnce(this.onLoadHandler, this);
-		this.onMessage.add(handlers.LogginHandler);
-		this.onMessage.add(this.handleMessage, this);
+		this.onLoad.addOnce(this.handleOnLoad, this);
 		this.button = undefined;
 		this.rect = undefined;
 	}
 
-	onLoadHandler() {
+	handleOnLoad() {
 		this.rect = new entities.RedRect(this);
 		new behaviors.LoopMoveToRight(this.rect).activate();
 
@@ -47,12 +46,5 @@ export default class extends BaseScene {
 		}
 		this.rect.modified();
 		console.log("clicked");
-	}
-
-	handleMessage(arg: types.MessageEvent) {
-		switch (arg.data.type) {
-			default:
-			// 無視
-		}
 	}
 }

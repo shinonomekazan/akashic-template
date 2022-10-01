@@ -1,6 +1,6 @@
 import * as types from "../types";
 
-export default class extends g.Scene {
+export class BaseScene extends g.Scene {
 	get vars() {
 		return this.game.vars as types.GameVars;
 	}

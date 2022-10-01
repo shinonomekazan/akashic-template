@@ -3,7 +3,7 @@ export interface Frame {
 	modifed: () => void;
 }
 
-export default class {
+export class ClickableFrame {
 	readonly target: g.FrameSprite;
 
 	readonly normalFrame: number;

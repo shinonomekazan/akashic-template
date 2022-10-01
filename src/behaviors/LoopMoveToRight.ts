@@ -1,4 +1,4 @@
-export default class {
+export class LoopMoveToRight {
 	target: g.E;
 
 	speed: number;
