@@ -1,1 +1,1 @@
-export { default as LogginHandler } from "./LoggingHandler";
+export * from "./LoggingHandler";

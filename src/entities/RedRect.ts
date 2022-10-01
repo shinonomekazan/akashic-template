@@ -6,7 +6,7 @@ export interface RedRectParameters {
 	local?: boolean;
 }
 
-export default class extends g.FilledRect {
+export class RedRect extends g.FilledRect {
 	constructor(scene: g.Scene, p?: RedRectParameters) {
 		super({
 			scene,

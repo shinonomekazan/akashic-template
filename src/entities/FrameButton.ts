@@ -10,7 +10,7 @@ export interface FrameButtonParameters {
 	parent?: g.E | g.Scene;
 }
 
-export default class extends g.FrameSprite {
+export class FrameButton extends g.FrameSprite {
 	constructor(scene: g.Scene, p: FrameButtonParameters) {
 		super({
 			scene,

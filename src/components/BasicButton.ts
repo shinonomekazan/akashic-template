@@ -13,7 +13,7 @@ export interface ClickEvent {
 	local: boolean;
 }
 
-export default class {
+export class BasicButton {
 	readonly view: entities.FrameButton;
 
 	readonly onClick: g.Trigger<ClickEvent>;
