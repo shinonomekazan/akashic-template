@@ -1,6 +1,6 @@
 export function mergeAssetIds(
 	param: g.SceneParameterObject,
-	assetIds: (string | g.DynamicAssetConfiguration)[]
+	assetIds: (string | g.DynamicAssetConfiguration)[],
 ) {
 	param.assetIds = assetIds;
 	return param;
@@ -8,7 +8,7 @@ export function mergeAssetIds(
 
 export function mergeAssetPaths(
 	param: g.SceneParameterObject,
-	assetPaths: string[]
+	assetPaths: string[],
 ) {
 	param.assetPaths = assetPaths;
 	return param;

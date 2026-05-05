@@ -20,7 +20,7 @@
 	"environment": {
 		"sandbox-runtime": "3",
 		"akashic-runtime": {
-			"version": "~3.0.19",
+			"version": "~3.7.0",
 			"flavor": "-canvas"
 		}
 	},

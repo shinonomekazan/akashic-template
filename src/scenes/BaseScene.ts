@@ -1,17 +1,15 @@
 import * as types from "../types";
 
 export class BaseScene extends g.Scene {
-	get vars() {
+	get gameVars() {
 		return this.game.vars as types.GameVars;
 	}
 
 	get config() {
-		const vars = this.game.vars as types.GameVars;
-		return vars.config;
+		return this.gameVars.config;
 	}
 
 	get gameState() {
-		const vars = this.game.vars as types.GameVars;
-		return vars.gameState;
+		return this.gameVars.gameState;
 	}
 }

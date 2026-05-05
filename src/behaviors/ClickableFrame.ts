@@ -13,7 +13,7 @@ export class ClickableFrame {
 	constructor(
 		target: g.FrameSprite,
 		normalFrame: number,
-		clickFrame: number
+		clickFrame: number,
 	) {
 		this.target = target;
 		this.normalFrame = normalFrame;

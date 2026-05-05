@@ -9,7 +9,7 @@ export interface BasicButtonParameters extends entities.FrameButtonParameters {
 }
 
 export interface ClickEvent {
-	player: g.Player;
+	player?: g.Player;
 	local: boolean;
 }
 
