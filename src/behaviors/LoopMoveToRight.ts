@@ -14,13 +14,15 @@ export class LoopMoveToRight {
 
 	destroy() {
 		this.target.onUpdate.remove(this.onUpdateHandler, this);
-		this.target = undefined;
+		// 本当は開放したいけどoptionalにしないといけないので。。
+		// this.target = undefined;
 	}
 
 	get targetWidth() {
 		if (this.target.parent instanceof g.Scene) {
 			return this.target.parent.game.width;
 		}
+		if (this.target.parent == null) throw new Error("targetに親がいません");
 		return this.target.parent.width;
 	}
 

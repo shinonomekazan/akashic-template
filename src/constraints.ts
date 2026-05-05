@@ -1,3 +1,1 @@
-export const AssetPaths = [
-	"/assets/parts/buttons.png",
-];
+export const AssetPaths = ["/assets/parts/buttons.png"];

@@ -39,6 +39,7 @@ export class GameScene extends BaseScene {
 	}
 
 	handleButtonClick() {
+		if (this.rect == null) return;
 		if (this.rect.visible()) {
 			this.rect.hide();
 		} else {
